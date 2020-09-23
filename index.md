@@ -1,37 +1,26 @@
-## Welcome to GitHub Pages
+## Rice Disease Detection
 
-You can use the [editor on GitHub](https://github.com/alcatraz47/Rice_Disease_Detection/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+This was the first medium-scale capstone project of my team-mates and mine. In this project, the dataset was taken from Kaggle. It contained about 3000 images.
+### Dataset:
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+As stated above the total images that my team and me found was 3000. There are data of 5 diseased leaves and 1 healthy rice leaf.
 
-### Markdown
+### Dataset Pre-processing:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+I have increased the dataset using an image generator and enhanced the amount of dataset from 3000 to 8000. The techniques are:
+  - Rotation: 20%
+  - Zoom: 15%
+  - Width Shifting: 20%
+  - Height Shifting: 20%
 
-```markdown
-Syntax highlighted code block
+All the data augmentation was performed using Keras's ImageDataGenerator class. Later on, normalisation and image segmentation was done on them after contour detection with edge detection.
 
-# Header 1
-## Header 2
-### Header 3
+### Model and Deployment:
 
-- Bulleted
-- List
+After pre-processing, 3 custom CNNs, 2 Resnet32(one with Adam optimiser and another one with RADAM optimise)s were used to predict diseases/healthiness from that dataset. The accuracy was about 83% on custom CNNs and 85% on Resnets. The model was used as a worker using MQTT data/message transferring broker service via an Android application.
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/alcatraz47/Rice_Disease_Detection/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### Demo:
+[![Demo CountPages alpha](https://j.gifs.com/k81G9K.gif)] (https://youtu.be/ePItve9IHrs)
 
 ### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Md. Mahmudul Haque: mahmudulhaquearfan@gmail.com
