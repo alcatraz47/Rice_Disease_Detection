@@ -20,7 +20,8 @@ All the data augmentation was performed using Keras's ImageDataGenerator class. 
 After pre-processing, 3 custom CNNs, 2 Resnet32(one with Adam optimiser and another one with RADAM optimise)s were used to predict diseases/healthiness from that dataset. The accuracy was about 83% on custom CNNs and 85% on Resnets. The model was used as a worker using MQTT data/message transferring broker service via an Android application.
 
 ### Demo:
-[![Demo CountPages alpha](https://j.gifs.com/k81G9K.gif)] (https://youtu.be/ePItve9IHrs)
+![Demo CountPages alpha](https://j.gifs.com/k81G9K.gif) 
+Full video link: (https://youtu.be/ePItve9IHrs)
 
 ### Support or Contact
 Md. Mahmudul Haque: mahmudulhaquearfan@gmail.com
